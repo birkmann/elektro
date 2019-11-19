@@ -278,7 +278,7 @@ nav.mobile ul li a {
 		bottom: 40px;
 	}
 	.emotion .text h2 span {
-        background: linear-gradient(-120deg, #4cc143, #199712);
+        background: linear-gradient(-120deg, #56cd4c, #2fab26);
     	box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.05);
     	color: #fff;
     	padding: 10px 15px;
@@ -302,7 +302,7 @@ nav.mobile ul li a {
 .content .box .text .button {
 	display: block;
 	text-decoration: none;
-	background: linear-gradient(-120deg, #4cc143, #199712);
+	background: linear-gradient(-120deg, #56cd4c, #2fab26);
 	color: #fff;
 	padding: 15px 25px;
 	border-radius: 4px;
@@ -310,6 +310,10 @@ nav.mobile ul li a {
 	max-width: 375px;
 	text-align: center;
 	font-size: 1.2em;
+}
+
+.content .box .text .button:hover {
+	background: #2fab26;
 }
 
 .content .box .text {
