@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	font: 15px/1.6em 'Open Sans', sans-serif;
+	font: 14px/1.6em 'Open Sans', sans-serif;
 	color: #333;
 }
 
@@ -49,7 +49,6 @@ h2 {
 	background: #e9001a;
 	background: linear-gradient(-90deg, rgb(251, 176, 30), rgb(229, 2, 18), rgb(192, 6, 156));
 }
-
 
 header.main {
 	border-bottom: 1px solid #ddd;
@@ -202,7 +201,6 @@ nav.mobile ul li a {
 }
 
 .emotion {
-	min-height: 400px;
 	position: relative;
 }
 
@@ -211,7 +209,6 @@ nav.mobile ul li a {
 	background-image: url("https://images.pexels.com/photos/349749/kitchen-stove-sink-kitchen-counter-349749.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
 	top: 0;
 	width: 100%;
-	min-height: 400px;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -233,10 +230,9 @@ nav.mobile ul li a {
 	line-height: 1.6em;
 }
 
-
 .emotion,
 .emotion .bg {
-	min-height: 500px;
+	min-height: 400px;
 }
 
 .emotion .wrapper {
@@ -272,7 +268,7 @@ nav.mobile ul li a {
 @media (min-width: 960px) {
 	.emotion,
 	.emotion .bg {
-		min-height: 700px;
+		min-height: 550px;
 	}
 	.emotion .wrapper {
 		bottom: 40px;
@@ -284,6 +280,13 @@ nav.mobile ul li a {
     	padding: 10px 15px;
     	line-height: 1.8em;
     	font-size: 1.4em;
+	}
+}
+
+@media (min-width: 1400px) {
+	.emotion,
+	.emotion .bg {
+		min-height: 600px;
 	}
 }
 
