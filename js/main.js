@@ -1,5 +1,9 @@
 $(document).ready(function() {
 	$("body").removeClass("preload");
+	$('.burger').click(function(){
+		$(this).toggleClass('open');
+		$("body").toggleClass('open');
+	});
 });
 
 $(window).scroll(function(){

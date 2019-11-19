@@ -41,12 +41,14 @@ h2 {
 }
 
 .container {
-	padding: 0 15px;
+	padding: 0 20px;
 	max-width: 1200px;
 	margin: 0 auto;
 }
 
 .top-border {
+	position: relative;
+	z-index: 100;
 	height: 20px;
 	width: 100%;
 	display: block;
@@ -75,6 +77,9 @@ h2 {
 
 header.main {
 	border-bottom: 1px solid #ddd;
+	position: relative;
+	z-index: 100;
+	background: #fff;
 }
 
 header.main .container {
@@ -116,7 +121,7 @@ header.main nav ul li a {
 
 header.main a.logo {
 	line-height: 80px;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
 	color: #e2001a;
 	display: flex;
@@ -127,14 +132,75 @@ header.main a.logo b {
 }
 
 header.main a.logo img {
-    width: 35px;
-    vertical-align: middle;
-    margin-right: 5px;
-    margin-top: -5px;
+	width: 35px;
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: -5px;
+}
+
+header.main .nav-toggle {
+	width: 80px;
+	height: 80px;
+	margin-left: auto;
+	margin-right: -20px;
+	text-align: center;
+	line-height: 80px;
+	font-weight: bold;
+	cursor: pointer;
+	color: #666;
+}
+
+@media (min-width: 380px) {
+	header.main a.logo {
+		font-size: 2em;
+	}
+}
+
+@media (min-width: 960px) {
+	header.main .nav-toggle {
+		display: none;
+	}
+}
+
+nav.mobile {
+	position: absolute;
+	top: 0;
+	z-index: 99;
+	background: #fff;
+	width: 100%;
+	padding: 100px 0 0;
+	transform: translateY(-100%);
+	transition: all 0.25s ease-in-out;
+}
+
+body.open nav.mobile {
+	transform: translateY(0%);
+}
+
+nav.mobile ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav.mobile ul li {
+	list-style: none;
+	border-bottom: 1px solid #ccc;
+}
+
+nav.mobile ul li:last-child {
+	border-bottom: 0 none;
+}
+
+nav.mobile ul li a {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.2em;
+	line-height: 60px;
+	color: #333;
 }
 
 .emotion {
-	height: 80vh;
 	min-height: 400px;
 	position: relative;
 }
@@ -142,18 +208,17 @@ header.main a.logo img {
 .emotion .bg {
 	background-image: url("https://media3.bosch-home.com/Images/3200x/MCIM02821600_Stage_3200x1240_Startseite_AccentLine.jpg");
 	top: 0;
-    width: 100%;
-    height: 80vh;
-    min-height: 400px;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: inset 0 0 100px black;
-    transition: opacity .5s ease-in-out;
+	width: 100%;
+	min-height: 400px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: inset 0 0 100px black;
+	transition: opacity .5s ease-in-out;
 }
 
 .emotion .text {
-	padding: 20px;
+	padding: 20px 0;
 }
 
 .emotion .text h2 {
@@ -164,30 +229,41 @@ header.main a.logo img {
 	margin: 0 0 20px;	
 }
 
-@media (min-width: 960px) {
 
-	.emotion .wrapper {
-		position: absolute;
-		bottom: 40px;
-		width: 100%;
-	}
-
-	.emotion .text {
-		width: 50%;
-		background: rgba(255,255,255,0.9);
-		color: #333;
-		padding: 20px;
-	}
-
+.emotion,
+.emotion .bg {
+	min-height: 500px;
 }
 
-.content .box {
-	min-height: 200px;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
+.emotion .wrapper {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+.emotion .text {
+	background: rgba(255,255,255,0.9);
+	color: #333;
+	padding: 20px;
+}
+
+@media (max-width: 959px) {
+	.emotion .container {
+		padding: 0;
+	}
+}
+
+@media (min-width: 960px) {
+	.emotion,
+	.emotion .bg {
+		min-height: 700px;
+	}
+	.emotion .wrapper {
+		bottom: 40px;
+	}
+	.emotion .text {
+		width: 50%;
+	}
 }
 
 .content .box img {
@@ -196,21 +272,26 @@ header.main a.logo img {
 	display: block;
 }
 
-.content .box .text {
-	margin: 0 10%;
-}
-
 .content .box .text p {
 	font-size: 1.1em;
+	line-height: 1.6em;
 }
 
 .content .box .text .button {
-	display: inline-block;
-	text-decoration: none;
-	background: #0facf3;
-	color: #fff;
-	padding: 10px 25px;
-	border-radius: 4px;
+    display: block;
+    text-decoration: none;
+    background: #0facf3;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 4px;
+    margin: 0 auto;
+    max-width: 340px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.content .box .text {
+	margin: 20px;
 }
 
 
@@ -222,6 +303,19 @@ header.main a.logo img {
 
 	.content .box-50 {
 		width: 50%;
+	}
+
+	.content .box {
+		min-height: 200px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.content .box .text {
+		margin: 0 10%;
 	}
 
 }
