@@ -216,12 +216,8 @@ nav.mobile ul li a {
 	transition: opacity .5s ease-in-out;
 }
 
-.emotion .text {
-	padding: 20px 0;
-}
-
 .emotion .text h2 {
-	margin: 10px 0 10px;
+	margin: 0;
 }
 
 .emotion .text p {
@@ -232,23 +228,15 @@ nav.mobile ul li a {
 
 .emotion,
 .emotion .bg {
-	min-height: 400px;
+	min-height: 250px;
 }
 
-.emotion .wrapper {
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-}
 
 .emotion .text h2 span.mobile {
 	display: none;
 }
 
 @media (max-width: 959px) {
-	.emotion .text h2 {
-		margin: 20px;
-	}
 	.emotion .text h2 span.mobile {
 		display: block;
 		background: linear-gradient(-115deg, #4cc143, #199712);
@@ -265,6 +253,13 @@ nav.mobile ul li a {
 	}
 }
 
+@media (min-width: 500px) {
+	.emotion,
+	.emotion .bg {
+		min-height: 400px;
+	}
+}
+
 @media (min-width: 960px) {
 	.emotion,
 	.emotion .bg {
@@ -272,6 +267,14 @@ nav.mobile ul li a {
 	}
 	.emotion .wrapper {
 		bottom: 40px;
+	}
+	.emotion .wrapper {
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+	}
+	.emotion .text h2 {
+		margin-bottom: 50px;
 	}
 	.emotion .text h2 span {
         background: linear-gradient(-120deg, #56cd4c, #2fab26);
