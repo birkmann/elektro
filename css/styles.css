@@ -1,13 +1,7 @@
 body {
 	margin: 0;
-	font: 15px/1.6em sans-serif;
+	font: 15px/1.6em 'Open Sans', sans-serif;
 	color: #333;
-}
-
-@media (min-width: 1600px) {
-	body {
-		font: 16px/1.6em sans-serif;
-	}
 }
 
 *, *:before, *:after {
@@ -42,35 +36,17 @@ h2 {
 
 .container {
 	padding: 0 20px;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 }
 
 .top-border {
 	position: relative;
 	z-index: 100;
-	height: 20px;
+	height: 15px;
 	width: 100%;
 	display: block;
 	background: #e9001a;
-	background: linear-gradient(to right, 
-		#952432 10%,
-		#b1273a 20%,
-		#d52027 30%,
-		#67398e 40%,
-		#393c80 50%,
-		#263d83 60%,
-		#255da1 70%,
-		#307eb6 80%,
-		#0a9d5d 90%,
-		#8abc6e 100%);
-	background: linear-gradient(to right, 
-		#f8e705 0%,
-		#f8e705 20%,
-		#00b2ed 40%,
-		#00b2ed 60%,
-		#df002d 80%,
-		#df002d 100%);
 	background: linear-gradient(-90deg, rgb(251, 176, 30), rgb(229, 2, 18), rgb(192, 6, 156));
 }
 
@@ -88,7 +64,12 @@ header.main .container {
 
 header.main a {
 	text-decoration: none;
-	color: #000;
+	color: #8f9192;
+	transition: color 0.15s ease-in-out;
+}
+
+header.main a:hover {
+	color: #333;
 }
 
 header.main nav {
@@ -206,7 +187,8 @@ nav.mobile ul li a {
 }
 
 .emotion .bg {
-	background-image: url("https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-image: url("https://tsadswmaw001.blob.core.windows.net/ds-typo3-azure/user_upload/News/Smart_Home_im_Hard_Turm_Park_in_Zuerich/smart-home-digitalstrom-hard-turm-park-1.jpg");
+	background-image: url("https://images.pexels.com/photos/349749/kitchen-stove-sink-kitchen-counter-349749.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
 	top: 0;
 	width: 100%;
 	min-height: 400px;
@@ -226,7 +208,9 @@ nav.mobile ul li a {
 }
 
 .emotion .text p {
-	margin: 0 0 20px;	
+	margin: 0 0 20px;
+	font-size: 1.1em;
+	line-height: 1.6em;
 }
 
 
@@ -241,13 +225,25 @@ nav.mobile ul li a {
 	width: 100%;
 }
 
-.emotion .text {
-	background: rgba(255,255,255,0.9);
-	color: #333;
-	padding: 20px;
+.emotion .text h2 span.mobile {
+	display: none;
 }
 
 @media (max-width: 959px) {
+	.emotion .text h2 {
+		margin: 20px;
+	}
+	.emotion .text h2 span.mobile {
+		display: block;
+		background: linear-gradient(-115deg, #4cc143, #199712);
+    	padding: 20px;
+    	font-size: 0.8em;
+    	color: #fff;
+    	line-height: 1.6em;
+	}
+	.emotion .text h2 span.desktop {
+		display: none;
+	}
 	.emotion .container {
 		padding: 0;
 	}
@@ -261,8 +257,13 @@ nav.mobile ul li a {
 	.emotion .wrapper {
 		bottom: 40px;
 	}
-	.emotion .text {
-		width: 50%;
+	.emotion .text h2 span {
+        background: linear-gradient(-120deg, #4cc143, #199712);
+    	box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.05);
+    	color: #fff;
+    	padding: 10px 15px;
+    	line-height: 1.8em;
+    	font-size: 1.4em;
 	}
 }
 
@@ -275,19 +276,20 @@ nav.mobile ul li a {
 .content .box .text p {
 	font-size: 1.1em;
 	line-height: 1.6em;
+	margin-bottom: 40px;
 }
 
 .content .box .text .button {
-    display: block;
-    text-decoration: none;
-    background: #0facf3;
-    color: #fff;
-    padding: 15px 25px;
-    border-radius: 4px;
-    margin: 0 auto;
-    max-width: 375px;
-    text-align: center;
-    font-size: 1.2em;
+	display: block;
+	text-decoration: none;
+	background: linear-gradient(-120deg, #4cc143, #199712);
+	color: #fff;
+	padding: 15px 25px;
+	border-radius: 4px;
+	margin: 25px auto;
+	max-width: 375px;
+	text-align: center;
+	font-size: 1.2em;
 }
 
 .content .box .text {
@@ -321,12 +323,126 @@ nav.mobile ul li a {
 	.content .box .text {
 		margin: 0 10%;
 	}
+	.content .box.image:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		top: calc(50% - 20px);
+		width: 0;
+		height: 0;
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		border-left: 20px solid #fff;
+		clear: both;
+	}
+	.content .row.reverse .box.image:after {
+		left: auto;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-left: 20px solid transparent;
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		border-right: 20px solid #fff;
+	}
 
 }
 
+section.brands {
+	padding: 50px 0;
+	text-align: center;
+}
+
+section.brands .container {
+	max-width: 100%;
+}
+
+section.brands h3 {
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+section.brands ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section.brands li {
+	width: 50%;
+}
+
+section.brands li {
+	list-style: none;
+	position: relative;
+	height: 100px;
+}
+
+section.brands li img {
+	width: 100%;
+	height: auto;
+	padding: 25px;
+	vertical-align: middle;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+@media (min-width: 960px) {
+	section.brands ul {
+		display: flex;
+	}
+	section.brands li {
+		width: 10%;
+	}
+}
 
 footer.main {
-	background: #333;
-	color: #fff;
 	padding: 50px 0;
+	background: #eee;
+}
+
+footer.main h3 {
+	border-bottom: 2px solid #ccc;
+	line-height: 1.6em;
+	padding-bottom: 10px;
+}
+
+footer.main ul {
+	margin: 0;
+	padding: 0;
+}
+
+footer.main ul li {
+	list-style: none;
+}
+
+footer.main a {
+	display: inline-block;
+	text-decoration: none;
+	color: #666;
+	line-height: 35px;
+	transition: all 0.15s ease-in-out;
+}
+
+footer.main a:hover {
+	color: #000;
+}
+
+
+@media (min-width: 960px) {
+	footer.main .row {
+		display: flex;
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+	footer.main .col {
+		width: 33%;
+		padding: 0 25px;
+	}
 }
