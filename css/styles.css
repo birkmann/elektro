@@ -101,22 +101,36 @@ header.main nav ul li a {
 }
 
 header.main a.logo {
-	line-height: 80px;
-	font-size: 1.5em;
-	font-weight: bold;
-	color: #e2001a;
 	display: flex;
+	position: relative;
+	font-size: 1.5em;
 }
 
-header.main a.logo b {
-	color: #e2001a;
+header.main a.logo .left {
+	align-self: center;
+	margin-right: 10px;
 }
 
 header.main a.logo img {
-	width: 35px;
+	width: 40px;
 	vertical-align: middle;
-	margin-right: 5px;
-	margin-top: -5px;
+	display: block;
+}
+
+header.main a.logo .text {
+    line-height: 66px;
+    font-size: 1.25em;
+    color: #e9001a;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+header.main a.logo .sub {
+	display: block;
+	line-height: 1em;
+	font-size: 0.5em;
+	margin-top: -17px;
+	color: #333;
 }
 
 header.main .nav-toggle {
