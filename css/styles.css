@@ -142,7 +142,7 @@ header.main .nav-toggle {
 	width: 80px;
 	height: 80px;
 	margin-left: auto;
-	margin-right: -20px;
+	margin-right: -15px;
 	text-align: center;
 	line-height: 80px;
 	font-weight: bold;
@@ -206,7 +206,7 @@ nav.mobile ul li a {
 }
 
 .emotion .bg {
-	background-image: url("https://media3.bosch-home.com/Images/3200x/MCIM02821600_Stage_3200x1240_Startseite_AccentLine.jpg");
+	background-image: url("https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 	top: 0;
 	width: 100%;
 	min-height: 400px;
@@ -285,7 +285,7 @@ nav.mobile ul li a {
     padding: 15px 25px;
     border-radius: 4px;
     margin: 0 auto;
-    max-width: 340px;
+    max-width: 375px;
     text-align: center;
     font-size: 1.2em;
 }
@@ -299,6 +299,10 @@ nav.mobile ul li a {
 
 	.content .row {
 		display: flex;
+	}
+
+	.content .row.reverse {
+		flex-direction: row-reverse;
 	}
 
 	.content .box-50 {
