@@ -488,7 +488,7 @@ section.brands li img {
 	margin: auto;
 }
 
-@media (min-width: 380px) {
+@media (min-width: 500px) {
 	section.brands li {
 		width: 20%;
 		height: 50px;
