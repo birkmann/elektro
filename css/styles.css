@@ -66,40 +66,40 @@ header.main .container {
 
 header.main a {
 	text-decoration: none;
-	color: #8f9192;
-	transition: color 0.15s ease-in-out;
+	color: #000;
 }
 
-header.main a:hover {
-	color: #333;
-}
-
-header.main nav {
+header.main nav.main {
 	margin-left: auto;
 	display: none;
 }
 
 @media (min-width: 960px) {
-	header.main nav {
+	header.main nav.main {
 		display: block;
 	}
 }
 
-header.main nav ul {
+header.main nav.main ul {
 	margin: 0;
 	padding: 0;
 	display: flex;
 }
 
-header.main nav ul li {
+header.main nav.main ul li {
 	list-style: none;
 }
 
-header.main nav ul li a {
+header.main nav.main ul li a {
 	display: inline-block;
 	line-height: 80px;
 	padding: 0 20px;
-	font-size: 1.1em;
+	font-size: 1.25em;
+	transition: color 0.15s ease-in-out;
+}
+
+header.main nav.main ul li a:hover {
+	color: #005691;
 }
 
 header.main a.logo {
